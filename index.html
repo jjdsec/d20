@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
      <script>
         if (document.location.href.includes("?code=")){
-            document.location.href = document.location.protocol + "://" + document.location.hostname + document.location.pathname
+            document.location.replace("//" + document.location.hostname + document.location.pathname)
         }
     </script>
 </head>
