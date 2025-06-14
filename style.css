@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+    background-color: #1a1a1a;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+#scene-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Places the 3D scene behind the UI */
+}
+
+#ui-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2; /* Places the UI in front of the 3D scene */
+    pointer-events: none; /* Allows clicks to go "through" the container */
+}
+
+#result-text {
+    font-size: 4rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+#roll-button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #0e71eb;
+    color: white;
+    pointer-events: all; /* Makes only the button clickable */
+    transition: background-color 0.3s;
+}
+
+#roll-button:hover {
+    background-color: #0d65d1;
+}
